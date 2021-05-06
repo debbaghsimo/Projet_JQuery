@@ -1,0 +1,1146 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css" />
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+<script src="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<link rel="icon" href="favicon.ico" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="icon" type="image/png" href="/Image/android-chrome-512x512.png" />
+<link href="/assets/css/Style1.css" rel="stylesheet">
+		<link rel="stylesheet" href="assets/css/ionicons.min.css">
+<title>Vente et achat des jeux, Console en ligne</title>
+<script src="jquery-3.3.1.min.js"></script>
+<link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+<script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" data-auto-replace-svg="nest"></script>
+<link rel="stylesheet" href="/Flliper css js/jquery.flipster.min.css">
+
+
+<body>
+
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="site.html">
+                <img src="Image\DBG _ ZR_free-file (2).png">
+                <!-- <h3 class="my-heading ">MOJo<span class="bg-main">AVE</span></h3> -->
+            </a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+                data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="fa fa-bars mfa-white"></span>
+            </button>
+
+            <div id="main">
+                <a href="javascript:void(0)" class="openNav"><span class="fa fa-bars" onclick="openNav()"></span></a>
+            </div>
+
+
+
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+                <ul class="mob-ul">
+                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+
+                    <li class="nav-item"><a class="nav-link" href="#">Events</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Groups</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Music</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Marketplace</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Featured Artists</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Login</a></li>
+
+
+
+                </ul>
+            </div>
+
+
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+
+                    <div id="sin">
+
+
+
+                    </div>
+
+
+                    <form class="form-inline my-6 my-lg-0 col-md-10">
+                        <input data-toggle="modal" data-target="#login-modal" class="myform-control mr-sm-2"
+                            type="search" placeholder="Recherche..." aria-label="Search">
+                        <button class="btn btn-light"><i class="fa fa-search"></i></button>
+                    </form>
+
+
+                    <!-- <li class="nav-link">
+                        <a class="btn btn-primary btn-block btn-register" href="singup.html">Register</a>
+                    </li> -->
+
+                </ul>
+
+            </div>
+
+        </div>
+    </nav>
+    <script>
+        const islogIn = JSON.parse(localStorage.getItem("islogin"));
+        if (islogIn) {
+            const users = JSON.parse(localStorage.getItem("user"));
+            const activeUser = users[islogIn.id];
+
+            $("#sin").html(`
+            <ul class="nav navbar-nav navbar-right">
+                                    <li class="dropdown">
+                                        <a href="#" class="btn dropdown-toggle mi" data-toggle="dropdown">
+                                            <span class="glyphicon glyphicon-user"></span> 
+                                            <strong><i class="far fa-user-circle fa-1x"></i> ${activeUser.name}</strong>
+                                            <span class="glyphicon glyphicon-chevron-down"></span>
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li>
+                                                <div class="navbar-login">
+                                                    <div class="row">
+                                                        <div class="col-lg-3">
+                                                            <p class="text-center">
+                                                                <span><i  class="fas fa-user fa-4x"></i></span>
+                                                            </p>
+                                                        </div>
+                                                        <div class="col-lg-8">
+                                                            <p class="text-left"><strong>${activeUser.name}</strong></p>
+                                                            <p class="text-left small">${activeUser.email}</p>
+                                                            
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="divider"></li>
+                                            <li>
+                                                <div class="navbar-login navbar-login-session">
+                                                    <div class="row">
+                                                        <div class="col-lg-12">
+                                                            <p>
+                                                                <a id="log" href="#" class="btn btn-danger btn-block">Deconnexion</a>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>`)
+            $("#log").click(() => {
+                localStorage.removeItem("islogin");
+                location.reload();
+            })
+        } else {
+            $("#sin").html(`<li class="nav-link">
+                                    <a   class="btn btn-primary btn-block btn-login" href="singin.html">connexion</a>
+                                    
+                                </li>`);
+        }
+
+
+
+
+    </script>
+
+
+    <!-- <header class="masthead text-white ">
+        <div class="overlay"></div>
+        <div class="container slider-top-text">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h3 class="my-heading">Bienvenue Dans Le monde Des <span class="bg-main">Jeux</span></h3><br>
+                     <p class="myp-slider text-center">Where musicians unite and become better together</p> 
+                    <p class="myp text-center">SHARE YOUR MEMORIES   |   CONNECT WITH OTHERS   |   MAKE NEW FRIENDS</p>
+                    <a class="btn btn-primary btn-join" href="#">JOIN THE COMMUNITY</a>
+
+                </div>
+                <div class="col-md-12 text-center mt-5">
+                    <div class="scroll-down">
+                        <a class="btn btn-default btn-scroll floating-arrow" href="#gobottom" id="bottom"><i class="fa fa-angle-down"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+    </header>
+    <link href="https://raw.githubusercontent.com/daneden/animate.css/master/animate.css" rel="stylesheet">
+
+    <div id="myCarousel" class="carousel slide carousel-fade" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="mask flex-center">
+                    <div class="container">
+                        <div class="row align-items-center">
+                            <div class="col-md-7 col-12 order-md-1 order-2">
+                                <h4>Console <br>
+                                    PlayStation 5</h4>
+                                <p>PlayStation 5 Digital Edition au prix le moins cher au Maroc.<br>
+                                    Retrouvez également les prix chez les opérateurs au Maroc.<br> Prix actualisés
+                                    chaque semaine. </p>
+                                
+                                <a  class="ma" data-btn="ACHETER"
+                                data-desc="PlayStation 5 avec lecteur Blu-ray. Une console révolutionnaire entièrement centrée sur le joueur pour des expériences encore plus immersives et connectées avec vos jeux PS5 et PS4 rétrocompatibles
+                                Temps de chargement quasi instantanés pour les jeux PS5 (installés) grâce à un disque SSD ultra-haute vitesse, Interface utilisateur conçue pour fournir un accès immédiat à presque toutes les options du système sans quitter votre partie
+                                Niveau de réalisme inégalé grâce à la technologie de rendu de la lumière Ray Tracing, Prise en charge de la technologie HDR pour des couleurs vives et dynamiques, Possibilité de jouer en 4K et 8K sur les jeux et écrans compatibles
+                                Technologie Tempest 3D AudioTech pour une immersion sonore hors du commun, Retour haptique et gâchettes adaptatives via la manette DualSense pour ressentir les effets et l'impact de vos actions en jeu (sur une sélection de jeux PS5)
+                                Contenu : 1x Sony PlayStation 5, 1x Manette DualSense, 1 x socle, Connectique : 1 port HDMI 2.1, 3 ports USB, 1 port USB-C, 1 port Ethernet, Dimensions de la console (lxHxL) : 390 mm x 104 mm x 260 mm (sans socle), Poids : 4,5 kg, Couleur : Blanche"
+                                data-img="Image\Ps5.png" type="button" data-nom="Sony PlayStation 5"
+                                data-prix="9500 DH">AJOUTER AU PANIER</a>
+                            </div>
+                            <div class="col-md-5 col-12 order-md-2 order-1"><img src="Image\Ps5.png" class="mx-auto"
+                                    alt="slide"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="mask flex-center">
+                    <div class="container">
+                        <div class="row align-items-center">
+                            <div class="col-md-7 col-12 order-md-1 order-2">
+                                <h4>Console <br>
+                                    XBox Series X</h4>
+                                <p>Microsoft Xbox Series X au prix le moins cher au Maroc. <br>
+                                    Retrouvez également les prix chez les opérateurs au Maroc.<br> Prix actualisés
+                                    chaque semaine. </p>
+                                <a  class="ma" data-btn="ACHETER"
+                                data-desc="Découvrez la toute nouvelle Xbox dernière génération, la plus puissante et la plus rapide jamais conçue avec son lecteur Blu-ray 4K
+                                4K / 8K HDR - Plongez dans des univers ultra détaillés avec une résolution native 4K HDR . Compatible avec la technologie 8K HDR en connectant votre Xbox Series X à votre téléviseur 8K pour jouer dans les meilleures conditions grâce à la mise à l'échelle (4320p)
+                                120 FPS - La Xbox Series S permet un rendu encore plus fluide et dynamique allant jusqu’à 120 images par seconde (compatible Fortnite, Call of Duty : Warzone, Rocket League etc)
+                                Disque SSD 1To - Profitez d’un espace de stockage important pour tous vos jeux avec le disque SSD de 1 To pour des chargements rapides et des reprises de jeux instantanées
+                                100% Rétrocompatible- Profitez d'une large sélection de vos anciens jeux Xbox (100% des jeux Xbox One, des centaines de jeux Xbox 360 & Xbox originale) directement sur votre Xbox Series X
+                                Raytracing - Encore plus d’immersion avec le Raytracing qui permet d’afficher des lumières réalistes, des reflets précis, pour des environnements plus vrais que nature sur les jeux Xbox Series X compatibles
+                                Smart Delivery - Achetez une seule fois un jeu Xbox compatible Smart Delivery et upgradez sans surcoût pour la version Xbox Series X quand elle est disponible (Ex: Gears 5, Cyberpunk 2077, Assassin's Creed Valhalla, etc)
+                                Xbox Game Pass – Débloquez un large catalogue de plus de 150 jeux exceptionnels pour un abonnement mensuel accessible (abonnement vendu séparément) dont FIFA 20, NBA2K21 ou encore GTA V mais aussi 100% des exclusivités Xbox dès le jour de leur sortie (Minecraft, Forza Horizon 4, Gears 5, Sea of Thieves, Halo la collection le Major etc)
+                                Audio spatial 3D - Découvrez la nouvelle génération de technologie audio qui vous placent au coeur de votre expérience de jeu avec le Dolby Atmos pour les jeux compatibles (Ex: Forza Horizon 4, Ori & the will of the wisps, Gears 5, etc). "
+                                data-img="Image\Xbox.png" type="button" data-nom="XBox Series X"
+                                data-prix="6500 DH">AJOUTER AU PANIER</a>
+
+                            </div>
+                            <div class="col-md-5 col-12 order-md-2 order-1"><img src="Image\Xbox.png" class="mx-auto"
+                                    alt="slide"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="mask flex-center">
+                    <div class="container">
+                        <div class="row align-items-center">
+                            <div class="col-md-7 col-12 order-md-1 order-2">
+                                <h4>Console <br>
+                                    Xbox Series S</h4>
+                                <p>Microsoft Xbox Series X au prix le moins cher au Maroc.<br>
+                                    Retrouvez également les prix chez les opérateurs au Maroc.<br> Prix actualisés
+                                    chaque semaine. </p>
+                                    <a  class="ma" data-btn="ACHETER"
+                                    data-desc="Découvrez la toute nouvelle Xbox Series S, notre Xbox la plus compacte de tous les temps, 100% Digitale, une console next-gen à un prix accessible
+                                    4K HDR - Plongez dans des univers ultra détaillés avec une résolution interne 1080p HDR. Compatible avec la technologie 4K HDR en connectant votre Xbox Series S à votre téléviseur 4K pour jouer dans de meilleurs conditions grâce à la mise à l'échelle (2160p)
+                                    120 FPS - La Xbox Series S permet un rendu encore plus fluide et dynamique allant jusqu’à 120 images par seconde (compatible Fortnite, Call of Duty : Warzone, Rocket League etc)
+                                    Disque SSD 512GB - Profitez du disque SSD de 512GB pour des chargements quasi-instantanés
+                                    Raytracing - Encore plus d’immersion avec le Raytracing qui permet d’afficher des lumières et reflets réalistes, pour des environnements plus vrais que nature sur les jeux Xbox compatibles
+                                    Audio spatial 3D - Découvrez la nouvelle génération de technologie audio qui vous placent au coeur de votre expérience de jeu avec le Dolby Atmos pour les jeux compatibles
+                                    100% Rétrocompatible- Profitez d'une très large sélection de vos anciens jeux Xbox (100% des jeux Xbox One, des centaines de jeux Xbox 360 & Xbox originale) directement sur votre Xbox Series S
+                                    Xbox Game Pass – Débloquez un large catalogue de plus de 150 jeux exceptionnels pour un abonnement mensuel accessible (abonnement vendu séparément) dont FIFA 20, NBA2K21 ou encore GTA V mais aussi 100% des exclusivités Xbox dès le jour de leur sortie (Minecraft, Forza Horizon 4, Gears 5, Sea of Thieves, Halo la collection le Major etc)"
+                                    data-img="Image/xbox-series-s.png" type="button" data-nom="Xbox Series S"
+                                    data-prix="9500 DH">AJOUTER AU PANIER</a>
+                            </div>
+                            <div class="col-md-5 col-12 order-md-2 order-1"><img src="Image/xbox-series-s.png"
+                                    class="mx-auto" alt="slide"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="mask flex-center">
+                    <div class="container">
+                        <div class="row align-items-center">
+                            <div class="col-md-7 col-12 order-md-1 order-2">
+                                <h4>Console <br>
+                                    PlayStation 4</h4>
+                                <p>PlayStation 4 Disque 1 To au prix le moins cher au Maroc.<br>
+                                    Retrouvez également les prix chez les opérateurs au Maroc.<br> Prix actualisés
+                                    chaque semaine. </p>
+                                    <a  class="ma" data-btn="ACHETER"
+                                    data-desc="PlayStation 4 Pro 1 To avec manette sans fil DUALSHOCK 4, Deux fois plus puissante pour donner un coup de fouet à vos jeux
+                                    Puissance graphique doublée pour encore plus de fluidité et de netteté, Taux de rafraîchissement plus rapides pour une expérience de jeu explosive
+                                    Environnements à couper le souffle et immersion assurée grâce à la résolution 4K sur une variété de jeux, Prise en charge de la technologie HDR pour profiter de graphismes époustouflants
+                                    Contrôle total du jeu grâce à la manette ergonomique et intuitive DUALSHOCK 4, Wi-fi plus puissant pour échanger et partager en 1080p, Accès au meilleur du divertissement en résolution 4K
+                                    Contenu : 1x PlayStation 4 Pro 1 To G, 1 x Manette sans fil DUALSHOCK 4, Oreillette-micro mono incluse, Câbles : Alimentation, HDMI, USB, Dimensions de la console : 55 x 295 x 327 mm, Couleur : Noir (Jet Black),."
+                                    data-img="Image\Ps4.png" type="button" data-nom="Sony PlayStation 4"
+                                    data-prix="3200 DH">AJOUTER AU PANIER</a>
+                            </div>
+                            <div class="col-md-5 col-12 order-md-2 order-1"><img src="Image\Ps4.png" class="mx-auto"
+                                    alt="slide"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev"> <span
+                class="carousel-control-prev-icon" aria-hidden="true"></span> <span class="sr-only">Previous</span> </a>
+        <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next"> <span
+                class="carousel-control-next-icon" aria-hidden="true"></span> <span class="sr-only">Next</span> </a>
+    </div>
+    <!--slide end-->
+    <script> $('#myCarousel').carousel({
+            interval: 3000,
+        })</script>
+
+    <section class="testimonials" id="gobottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-7 mb-9 wow bounceInUp" data-wow-duration="1.4s">
+                    <div class="big-img">
+                        <img src="Image/Faucon-soldier-Espace-univers-fanzone-desktop.jpg" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="inner-section wow fadeInUp">
+                        <h3>Falcon et le Soldat <span class="bg-main">de l'Hiver &emsp;&emsp;&emsp; sont de retour
+                                !</span></h3>
+                        <br>
+                        <p class="text-justify">L’univers Marvel est un monde fictif, dans lequel évoluent les
+                            superhéros les plus connus des dernières décennies. Iron Man, Captain America, Thor : tous
+                            sont le fruit de l’imagination de Stan Lee et de ses dessinateurs Jack Kirby et Steve Ditko.
+                            D’abord développé sous forme de Comics, cet univers se retrouve aujourd’hui sur tous les
+                            écrans. Au cinéma avec une multitude de films ou au centre de jeux vidéo, les superhéros de
+                            la franchise sont les rois de la pop culture.</p>
+                    </div>
+                </div>
+
+
+
+                <!-- BEGIN # MODAL LOGIN -->
+                <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                    aria-hidden="true" style="display: none;">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                        </div>
+                    </div>
+
+                    <div class="container search-table">
+                        <div class="search-box">
+                            <div class="row">
+                                <div class="col-md-1"></div>
+                                <h5><b><u>Recherche: </u></b></h5>
+                            </div>
+                            <div class="col-md-12">
+                                <input type="text" id="myInput" onkeyup="myFunction()" class="form-control"
+                                    placeholder="Nom ou objet rechercher">
+                                <script>
+                                    $(document).ready(function () {
+                                        $("#myInput").on("keyup", function () {
+                                            var value = $(this).val().toLowerCase();
+                                            $("#myTable tr").filter(function () {
+                                                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                                            });
+                                        });
+                                    });
+                                </script>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="search-list">
+                            <table class="table" id="myTable">
+                                <thead>
+                                    <tr>
+                                        <th>Nom</th>
+                                        <th>Category</th>
+                                        <th>Prix</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="scroller">
+                                    <tr>
+                                        <td>Red Dead 2</td>
+                                        <td>Jeux</td>
+                                        <td>390 DH</td>
+                                    </tr>
+                                    <tr>
+                                        <td>PlayStation 5</td>
+                                        <td>Console</td>
+                                        <td>11200 DH</td>
+                                    </tr>
+                                    <tr>
+                                        <td>God of War</td>
+                                        <td>Jeux</td>
+                                        <td>360 DH</td>
+                                    </tr>
+                                    <tr>
+                                        <td>PlayStation 4</td>
+                                        <td>Console</td>
+                                        <td>3800 DH</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Marvels Spider-man</td>
+                                        <td>Jeux</td>
+                                        <td>450 DH</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Xbox Series X</td>
+                                        <td>Console</td>
+                                        <td>7500 DH</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Grand Theft Auto V</td>
+                                        <td>Jeux</td>
+                                        <td>500 DH</td>
+                                    </tr>
+                                    <tr>
+                                        <td>FIFA 21</td>
+                                        <td>Jeux</td>
+                                        <td>520 DH</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Uncharted 4</td>
+                                        <td>Jeux</td>
+                                        <td>350 DH</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Assassin’s Creed</td>
+                                        <td>Jeux</td>
+                                        <td>650 DH</td>
+                                    </tr>
+                                    <tr>
+                                        <td>The crew 2</td>
+                                        <td>Jeux</td>
+                                        <td>480 DH</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Pes 2020</td>
+                                        <td>Jeux</td>
+                                        <td>550 DH</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Call of Duty: Black Ops 4</td>
+                                        <td>Jeux</td>
+                                        <td>350 DH</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Resident Evil 2</td>
+                                        <td>Jeux</td>
+                                        <td>580 DH</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <!-- <div class="linear-grid"> -->
+                <div class="row wow bounceInUp">
+                    <div class="col-sm-2">
+                        <div class="card">
+                            <img src="Image/Red-Dead-Redemption-2-PS4.jpg"  style="width:100%">
+                            <h4>Red Dead 2</h4>
+                            <p class="price">390 DH</p>
+                            <p><button  class="ma" data-btn="ACHETER"
+                                data-desc="Développé par les créateurs de Grand Theft Auto V et Red Dead Redemption, Red Dead Redemption 2 raconte une histoire épique au cœur des terres sauvages et impitoyables des États-Unis. Le monde du jeu, vaste et immersif, sera aussi la base d’une toute nouvelle expérience multijoueur en ligne.
+                             Amérique, 1899. L’ère de l’Ouest sauvage touche à sa fin alors que les autorités ont décidé de traquer les dernières bandes de hors-la- loi qui sévissent encore. Ceux qui ne se rendent pas ou résistent sont tués.
+                            
+                            Suite à un braquage qui a mal tourné dans la ville de Blackwater, Arthur Morgan et le reste des hors-la-loi de la bande de Dutch van der Linde doivent prendre la fuite vers l’est. Les agents fédéraux et les meilleurs chasseurs de primes du pays se mettent à leurs trousses et la bande commet méfaits sur
+                            méfaits dans les vastes terres sauvages de l’Amérique dans un seul et unique but : survivre. Alors que des querelles internes menacent de faire voler la bande en éclats, Arthur est tiraillé entre ses propres idéaux et sa loyauté envers la bande qui l’a élevé."
+                                data-img="Image/Red-Dead-Redemption-2-PS4.jpg" type="button" data-nom="Red Dead 2"
+                                data-prix="390 DH">Commander <img
+                                    src="https://img.icons8.com/fluent/20/000000/fast-cart.png" /> </button></p>
+                          </div>    
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="card">
+                            <img src="Image/1507815671-1059-jaquette-avant-300x400.jpg" style="width:100%">
+                            <h4>God of War</h4>
+                            <p class="price">360 DH</p>
+                            <p><button class="ma" data-btn="ACHETER"
+                                data-img="Image/1507815671-1059-jaquette-avant-300x400.jpg" type="button"
+                                class="btn btn-outline-dark btn-sm"
+                                data-desc="Kratos a changé…
+                                Vivant comme un homme loin de l’ombre des dieux, Kratos doit faire face à un monde inconnu, des menaces inattendues et une nouvelle chance d’être père. Avec son fils Atreus, il devra affronter le royaume de Midgard et ses dangers pour accomplir une quête des plus personnelles.
+                                
+                                 Explorez un monde hostile peuplé de créatures terrifiantes tout droit issues de la mythologie nordique.
+                                Dominez vos ennemis dans des combats au corps-à-corps privilégiant la pensée tactique et la précision létale.
+                                Vivez le récit émouvant d’un père et de son fils, alors que Kratos lutte pour contrôler la rage qui l’a si longtemps alimenté."
+                                data-nom="God of War" data-prix="360 DH">Commander <img
+                                    src="https://img.icons8.com/fluent/20/000000/fast-cart.png" /> </button></p>
+                          </div>    
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="card">
+                            <img src="Image/Marvels-Spider-Man-300x400.jpg" style="width:100%">
+                            <h4>Marvels Spider-man</h4>
+                            <p class="price">450 DH</p>
+                            <p><button class="ma" data-btn="ACHETER"
+                                data-img="Image/Marvels-Spider-Man-300x400.jpg"
+                                data-desc="Une expérience Spider-Man totalement inédite
+                                L’un des superhéros les plus emblématiques du monde est à l’affiche de Marvel’s Spider-Man : un titre qui propose toutes les aptitudes acrobatiques, la capacité d’improvisation et les déplacements de toile en toile qui ont fait la renommée de l’homme araignée, sans oublier d’intégrer de nouveaux éléments encore jamais vus dans un jeu Spider-Man. Adonnez-vous au parkour, utilisez le décor, profitez d’un système de combat inédit et assistez à des scènes dignes de superproductions, comme si vous n’aviez jamais joué à Spider-Man auparavant.
+                                
+                                Marvel et Insomniac Games se sont associés pour créer une toute nouvelle histoire à la saveur authentique, digne de la légende de Spider-Man. Non, ce n’est pas le Spider-Man de vos souvenirs, ni celui que vous avez pu voir dans les salles obscures. Il s’agit d’un Peter Parker plus aguerri, qui maîtrise encore mieux la lutte contre le crime qui gangrène New York City. En parallèle, il lutte toujours pour maintenir l’équilibre entre sa carrière et sa vie personnelle très chaotique, alors que le destin de neuf millions de New-Yorkais dépend de lui."
+                                type="button" class="btn btn-outline-dark btn-sm" data-nom="Marvels Spider-man"
+                                data-prix="450 DH">Commander <img
+                                    src="https://img.icons8.com/fluent/20/000000/fast-cart.png" /></button></p>
+                          </div>    
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="card">
+                            <img src="Image/grand_theft_auto_v_ps4_17_VideoGameszfneh5mthr_a-300x400.jpg" alt="Denim Jeans" style="width:100%">
+                            <h4>Grand Theft Auto V</h4>
+                            <p class="price">500 DH</p>
+                            <p><button class="ma" data-btn="ACHETER"
+                                data-img="Image/grand_theft_auto_v_ps4_17_VideoGameszfneh5mthr_a-300x400.jpg" type="button"
+                                class="btn btn-outline-dark btn-sm" data-nom="Grand Theft Auto V"
+                                data-desc="Un jeune arnaqueur, un braqueur de banque à la retraite et un terrifiant psychopathe doivent effectuer une série de braquages pour survivre dans une ville sans pitié où ils ne peuvent faire confiance à personne, et encore moins les uns aux autres."
+                                data-prix="500 DH">Commander <img src="https://img.icons8.com/fluent/20/000000/fast-cart.png" /></button></p>
+                          </div>    
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="card">
+                            <img src="Image/fifa-21-cover-standard-edition-300x400.jpg" style="width:100%">
+                            <h4>FIFA 21</h4>
+                            <p class="price">520 DH</p>
+                            <p><button class="ma" data-btn="ACHETER"
+                                data-img="Image/fifa-21-cover-standard-edition-300x400.jpg" type="button"
+                                class="btn btn-outline-dark btn-sm" data-nom="FIFA 21"
+                                data-desc="Dans FIFA 21 ps4 Découvrez un plus haut niveau de réalisme de jeu qui vous récompense pour votre créativité et votre contrôle. gérez chaque instant en mode Carrière et vivez une authenticité inégalée qui offre l’expérience la plus vraie dans The World’s Game."
+                                data-prix="520 DH">Commander <img
+                                    src="https://img.icons8.com/fluent/20/000000/fast-cart.png" /></button></p>
+                          </div>    
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="card">
+                            <img src="Image/91bYmfqZkoL._SL1500-300x400.jpg"  style="width:100%">
+                            <h4>
+                                Uncharted 4</h4>
+                            <p class="price">350 DH</p>
+                            <p><button class="ma"
+                                data-img="Image/91bYmfqZkoL._SL1500-300x400.jpg" type="button" class="btn btn-outline-dark btn-sm"
+                                data-btn="ACHETER"
+                                data-nom="Uncharted 4"
+                                data-desc="A la recherche de richesses insoupçonnées dans sa toute première aventure sur PlayStation 4. Plusieurs années après sa dernière aventure de Uncharted  , le chasseur de trésors Nathan Drake doit sortir de sa retraite et réintégrer le monde des voleurs.
+            
+                                Animé par des enjeux beaucoup plus personnels, Nathan embarque pour un voyage à travers le monde de Uncharted 4 : A Thief’s End afin de révéler le complot historique que cache un légendaire trésor de pirates.
+                                
+                                Cette aventure épique mettra à l’épreuve ses limites physiques, sa ténacité et l’obligera à décider ce à quoi il est prêt à renoncer pour sauver les siens."
+                                data-prix="350 DH">Commander <img
+                                    src="https://img.icons8.com/fluent/20/000000/fast-cart.png" /></button></p>
+                          </div>    
+                    </div>
+                </div>
+                
+
+            </div>
+        </div><br>
+
+
+
+        <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+        <script language="javascript">
+            $(document).ready(function () {
+                $('#p1,#p2').hide();
+                $("#btndisplay").on("click", function () {
+                    $("#p1,#p2").toggle("slow");
+                    if ($(this).val() == "Afficher moins")
+                        $(this).val("Afficher plus");
+                    else
+                        $(this).val("Afficher moins");
+                });
+                $(".ma").click((e) => {
+                    const game = {
+                        name: $(e.target).attr("data-nom"),
+                        price: $(e.target).attr("data-prix"),
+                        img: $(e.target).attr("data-img"),
+                        desc: $(e.target).attr("data-desc"),
+                        btn: $(e.target).attr("data-btn")
+                    }
+                    localStorage.setItem("game", JSON.stringify(game));
+                    location.href = "./index2.html";
+                });
+            });
+        </script>
+
+        </script>
+            <div class="container">
+        <div id="p1" class="row">
+            <div class="col-sm-1"></div>
+            <div class="col-sm-2">
+                <div class="card">
+                    <img src="Image\the-crew-2-jeu-ps4--300x400.jpg" style="width:100%">
+                    <h4>The crew 2</h4>
+                    <p class="price">480 DH</p>
+                    <p><button id="p1" type="button" data-img="Image\the-crew-2-jeu-ps4--300x400.jpg"
+                        class="btn btn-outline-dark btn-sm ma" data-nom="The crew 2" data-btn="ACHETER"
+                        data-desc="La nouvelle création de la franchise révolutionnaire The Crew, THE CREW 2 retranscrit l’excitation de l’esprit motorsports américain dans l’un des mondes ouverts les plus exaltants jamais créé. Bienvenue à Motornation, un terrain de jeu immense, concentré en action et consacré à tous les sports mécaniques : les États-Unis d’Amérique. De la côte Est à la côte Ouest, quatre familles des sports mécaniques ont rendez-vous : Street Racing, Off-Road, Pro Racing, et Freestyle. Rejoignez-les dans des compétitions explosives et mettez vos talents à l’épreuve dans chaque discipline, en voiture, moto, bateau et avion. Vous êtes assoiffé de liberté et brûlez d’envie de dominer l’Amérique ? Vous pouvez désormais passer en un clin d’œil d’un véhicule à l’autre, sur terre, sur l’eau ou dans les airs et profiter d’une expérience de jeu unique entièrement façonnée par votre style personnel. Capturez et partagez tous vos exploits. The Crew 2 vous offre la possibilité de laisser libre cours à vos talents et de devenir le plus grand champion de sports mécaniques de l’histoire."
+                        data-prix="480 DH">Commander <img src="https://img.icons8.com/fluent/20/000000/fast-cart.png" />
+                    </button></p>
+                  </div>    
+            </div>
+            <div class="col-sm-2">
+                <div class="card">
+                    <img src="Image\assassin-s-creed-origins-jeu-ps4-300x400.jpg"  style="width:100%">
+                    <h4>Assassin’s Creed</h4>
+                    <p class="price">650 DH</p>
+                    <p><button id="p1" type="button"
+                        class="btn btn-outline-dark btn-sm ma" data-nom="Assassin’s Creed" data-btn="ACHETER"
+                        data-img="Image\assassin-s-creed-origins-jeu-ps4-300x400.jpg"
+                        data-desc="Voyagez à travers l’Égypte antique, le lieu le plus mystérieux de l’histoire, durant une période cruciale qui a forgé le monde. Découvrez les secrets derrière les Grandes Pyramides, les mythes oubliés, les derniers pharaons et – gravé dans des hiéroglyphes disparus – l’histoire originelle de la Confrérie des Assassins.
+            
+                        Depuis quatre ans, l’équipe derrière le très acclamé Assassin’s Creed IV Black Flag s’est concentrée à créer un nouveau départ pour la franchise. Découvrez une toute nouvelle façon de combattre, affrontez plusieurs ennemis en même temps et passez d’une arme de mêlée à une arme à distance en un clin d’œil. Choisissez vos compétences d’Assassin tout en explorant le pays entier de l’Égypte antique et prenez part à de multiples quêtes et histoires captivantes à travers un voyage qui bouleversera la civilisation Égyptienne."
+                        data-prix="650 DH">Commander <img src="https://img.icons8.com/fluent/20/000000/fast-cart.png" />
+                    </button></p>
+                  </div>    
+            </div>
+            
+            
+        
+            <div class="col-sm-2">
+                <div class="card">
+                    <img src="Image\1588011_max-300x400.jpg" style="width:100%">
+                    <h4>Call of Duty: Black Ops 4</h4>
+                    <p class="price">350 DH</p>
+                    <p><button class="ma" data-btn="ACHETER"
+                        data-img="Image\1588011_max-300x400.jpg" type="button"
+                        class="btn btn-outline-dark btn-sm" data-nom="Call of Duty®: Black Ops 4"
+                        data-desc="Call of Duty®: Black Ops 4 place la barre encore plus haut en offrant l’expérience de jeu la plus exaltante de la franchise, et cela en accordant une attention particulière à l’expérience de combat au sol tactique, ainsi qu’à la volonté du joueur. Le jeu propose un nouveau niveau d’action en ligne parmi une pléiade de nouvelles armes, cartes et de nouveaux modes. Pour la toute première fois, le mode Multijoueur devient le centre de la narration et permet aux joueurs d’explorer le rôle de chaque spécialiste, ainsi que la spécificité de chaque style de jeu. Avec le retour du système de création de classe et d’une nouvelle catégorie d’équipements, l’expérience de jeu devient plus personnalisable que jamais auparavant en donnant aux joueurs la possibilité d’équiper leur spécialiste. Si nous ajoutons à cela la capacité de débloquer des séries de points dévastatrices, les joueurs auront la possibilité d’être redoutable seul ou invincible au sein d’une équipe."
+                        data-prix="350 DH">Commander <img
+                            src="https://img.icons8.com/fluent/20/000000/fast-cart.png" /></button></p>
+                  </div>    
+            </div>
+            <div class="col-sm-2">
+                <div class="card">
+                    <img src="Image\resident-evil-2-ps4--300x400.jpg"  style="width:100%">
+                    <h4>
+                        Resident Evil 2</h4>
+                    <p class="price">580 DH</p> data-btn="ACHETER"
+                    <p><button id="p1" type="button" data-img="Image\resident-evil-2-ps4--300x400.jpg"
+                        class="btn btn-outline-dark btn-sm ma" data-nom="Resident Evil 2"
+                        data-desc="Sorti à l’origine en 1998, Resident Evil 2, l’un des jeux les plus emblématiques de son époque, revient dans une version entièrement révisée pour les consoles nouvelles générations.
+            
+                        Jouez aux campagnes individuelles de Leon Kennedy et Claire Redfield dans une toute nouvelle vue objective et explorez les quartiers infestés de zombies de Raccoon City, entièrement remodelée grâce au RE Engine de Capcom. Les énigmes, intrigues et zones inédites sauront terrifier les nouveaux venus aussi bien que les fans les plus chevronnés !"
+                        data-prix="580 DH">Commander <img src="https://img.icons8.com/fluent/20/000000/fast-cart.png" /></button></p>
+                  </div>    
+            </div>
+            <div class="col-sm-2">
+                <div class="card">
+                    <img src="Image\PES20_PS4Large-300x400.jpg" style="width:100%">
+                    <h4>Pes 2020</h4>
+                    <p class="price">550 DH</p> 
+                    <p><button id="p1" type="button" data-img="Image\PES20_PS4Large-300x400.jpg" data-btn="ACHETER"
+                        class="btn btn-outline-dark btn-sm ma" data-nom="Pes 2020" data-desc="Vous pouvez vous attendre à des changements majeurs dans le mode Master League. Frapper est le dialogue puissant et interactif qui vous permet de contrôler votre propre histoire en tant que joueur. Cela garantit que vous pouvez choisir vous-même l’approche qui convient à votre personnalité et à l’histoire que vous voulez jouer. Le marché des transferts dans PES 2020 a également été amélioré avec des algorithmes garantissant que les transferts, les montants, les salaires et autres éléments sont plus en équilibre avec la réalité.
+
+                        Créez et personnalisez les logos de sponsor visibles à l’arrière-plan lors des interviews et sur l’écran de démarrage de la Master League. Jouez le Master League et utilisez des gestionnaires légendaires comme avatar, tels que Zico, Cruyff et Maradonna.
+                        Journée
+                        
+                        Dans un tout nouveau mode de jeu pour PES 2020, Matchday, l’essence même du football apparaît dans un format compétitif qui permet aux joueurs de se rendre directement sur le terrain. Choisissez l’une des deux parties au début de cet événement hebdomadaire et accumulez des points avec chaque passe et but parfait. Vous travaillez avec des joueurs expérimentés et des nouveaux venus pour atteindre la grande finale.
+                        
+                        En outre, différents ajustements sont nécessaires pour faire de PES 2020 une expérience footballistique merveilleuse. Incluant des techniques améliorées, une défense plus réaliste, des interactions de joueur adaptées et bien plus encore."
+                     data-prix="550 DH">Commander <img src="https://img.icons8.com/fluent/20/000000/fast-cart.png" /></button></p>
+                  </div>    
+            </div>
+
+
+        </div>
+
+
+        </div>
+        </div>
+    </div>
+        </script>
+
+
+        <center><br><input type="button" value="Afficher plus" id="btndisplay" class="btn btn-outline-dark btn-sm">
+        </center>
+
+    </section>
+
+
+    <section class="testimonials mybg-events">
+
+        <div class="col-md-12 wow fadeInUp">
+            <h3 style="color: white;" class="text-center font-weight-bold">CYBER<span class="bg-main">PUNK</span> </h3>
+
+        </div><br>
+        <div class="container">
+            <div id="content1" class="row wow slideInLeft" data-wow-duration="3s">
+                <div class="col-md-4 mb-3">
+
+                    <div class="big-img2">
+                        <img src="Image\Cyberpunk_2077.png" class="img-fluid">
+                    </div>
+                    <img width="300" src="/Image/promo.png">
+                    <button class="btn btn-outline-light btn-block ma" data-img="Image\Cyberpunk_2077.png" data-btn="ACHETER"
+                        data-nom="Cyberpunk 2077" data-prix="590 DH" data-desc="Cyberpunk 2077 est un jeu d’action-aventure en monde ouvert
+                    qui se déroule à Night City, une mégalopole obsédée par le pouvoir, la
+                    séduction et les modifications corporelles. Vous incarnez V, mercenaire
+                    hors-la-loi à la recherche d’un implant unique qui serait la clé de
+                    l’immortalité. Personnalisez les cyberlogiciels, les compétences et le style
+                    de jeu de votre personnage, et explorez cette ville immense où chacun de vos
+                    choix aura un impact direct sur l’histoire et le monde qui vous entoure.">Ajouter Au
+                        Panier</button>
+
+                </div>
+                <div class="col-md-8">
+                    <video id="Video" class="bg-block__video lozad" autobuffer="true" muted="true" autoplay="true"
+                        loop="true" playsinline="true" webkit-playsinline="true">
+                        <source type="video/mp4" data-
+                            src="https://gmedia.playstation.com/is/content/SIEPDC/global_pdc/en/games/pdps/c/cy/cyberpunk-2077/ps4/videos/cyberpunk-2077-video-hero-01-ps4-en-18jun19.mp4"
+                            src="https://gmedia.playstation.com/is/content/SIEPDC/global_pdc/en/games/pdps/c/cy/cyberpunk-2077/ps4/videos/cyberpunk-2077-video-hero-01-ps4-en-18jun19.mp4">
+                    </video>
+                    <button class="btn btn-dark btn-block " id="mybtn1" onclick="myFunction()">Pause</button> <br>
+                    <p class="myp text-center desc">Cyberpunk 2077 est un jeu d’action-aventure en monde ouvert
+                        qui se déroule à Night City, une mégalopole obsédée par le pouvoir, la
+                        séduction et les modifications corporelles. Vous incarnez V, mercenaire
+                        hors-la-loi à la recherche d’un implant unique qui serait la clé de
+                        l’immortalité. Personnalisez les cyberlogiciels, les compétences et le style
+                        de jeu de votre personnage, et explorez cette ville immense où chacun de vos
+                        choix aura un impact direct sur l’histoire et le monde qui vous entoure.</p>
+
+
+                </div>
+            </div>
+            <script>
+                var video = document.getElementById("Video");
+                var btn = document.getElementById("mybtn1");
+
+                function myFunction() {
+                    if (video.paused) {
+                        video.play();
+                        btn.innerHTML = "Pause";
+                    } else {
+                        video.pause();
+                        btn.innerHTML = "Play";
+                    }
+                }
+            </script>
+
+
+
+            <div class="container">
+
+
+
+
+                <!-- <div class="col-md-8">
+                    <div class="inner-section">
+                        <div class="my-grid">
+                            <div class="row">
+                                <div class="col-sm-6 col-md-4 mb-3">
+
+                                    <img src="https://images.pexels.com/photos/761963/pexels-photo-761963.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+                                        class="img-fluid">
+
+                                </div>
+                                <div class="col-sm-6 col-md-8 mb-3 ">
+                                    <iframe width="474" height="229" src="https://www.youtube.com/embed/1DSutjnvTX4"
+                                        title="YouTube video player" frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+                                </div>
+
+                                <div class="col-md-8 mb-3">
+                                    <div class="text-block">
+                                        <h5 class="events-heading">Lorem ipsum is simply dummy text of the printing and typesetting industry.</h5> 
+                                        <p class="myp-font">Cyberpunk 2077 est un jeu d’action-aventure en monde ouvert
+                                            qui se déroule à Night City, une mégalopole obsédée par le pouvoir, la
+                                            séduction et les modifications corporelles. Vous incarnez V, mercenaire
+                                            hors-la-loi à la recherche d’un implant unique qui serait la clé de
+                                            l’immortalité. Personnalisez les cyberlogiciels, les compétences et le style
+                                            de jeu de votre personnage, et explorez cette ville immense où chacun de vos
+                                            choix aura un impact direct sur l’histoire et le monde qui vous entoure.
+
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class=" col-md-4 ">
+
+                                    <img src="https://images.pexels.com/photos/1150837/pexels-photo-1150837.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+                                        class="img-fluid">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+
+            </div>
+        </div>
+    </section>
+
+
+    <div class="testimonials bg-light" id="marketplace">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 mx-auto wow fadeInUp">
+                    <h3 class="text-center font-weight-bold">Top<span class="bg-main"> 10 Des Jeux</span> Les Plus
+                        Vendus</h3>
+                </div>
+            </div>
+
+            <div id="carousel">
+                <ul class="flip-items">
+                    <li data-flip-title="Cyberpunk" id="s">
+                        <img width="300" height="400" src="Image/asset-1838793.jpg">
+                    </li>
+                    <li data-flip-title="Outriders">
+                        <img width="300" height="400" src="Image/1618322913-8560-photo.png">
+                    </li>
+                    <li data-flip-title="WRC 9">
+                        <img width="300" height="400" src="Image/1596619832-5064-jaquette-avant.png">
+                    </li>
+                    <li data-flip-title="FARCRY 6">
+                        <img width="300" height="400" src="Image/Far-Cry-6-Tetra-PS4.jpg">
+                    </li>
+                    <li data-flip-title="Red Dead II">
+                        <img width="300" height="400" src="Image\Red-Dead-Redemption-2-PS4.jpg">
+                    </li>
+                    <li data-flip-title="Sniper Contracts 2">
+                        <img width="300" height="400" src="Image/Packshot-Sniper.png">
+                    </li>
+                    <li data-flip-title="Call Of Duty">
+                        <img src="Image\1588011_max-300x400.jpg">
+                    </li>
+                    <li data-flip-title="Assassin’s Creed">
+                        <img src="Image\assassin-s-creed-origins-jeu-ps4-300x400.jpg">
+                    </li>
+                    <li data-flip-title="Spider-man">
+                        <img src="Image\Marvels-Spider-Man-300x400.jpg">
+                    </li>
+                    <li data-flip-title="Fifa 21">
+                        <img src="Image\fifa-21-cover-standard-edition-300x400.jpg">
+                    </li>
+                </ul>
+            </div>
+
+            <script src="/Flliper css js/jquery.flipster.min.js"></script>
+            <script>
+                var coverflow = $("#coverflow").flipster();
+                var carousel = $("#carousel").flipster({
+                    style: 'carousel',
+                    spacing: -0.5,
+                    nav: true,
+                    buttons: true,
+                });
+                var wheel = $("#wheel").flipster({
+                    style: 'wheel',
+                    spacing: 0
+                });
+                var flat = $("#flat").flipster({
+                    style: 'flat',
+                    spacing: -0.25
+                });
+            </script>
+        </div>
+    </div>
+    </div>
+
+    </div>
+
+
+
+    <!-- /-----------------------------------------------------------------------------------------/ -->
+
+
+
+    <section class="testimonials text-center mybg-music">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 wow fadeInUp">
+
+                    <h3 class="title-heading text-center font-weight-bold"><u>Les Hits À Venir</u></h3>
+                    <p class="myp text-center">Découvrez les prochaines sorties PS5, Xbox Series, PS4, Switch, Xbox
+                        One... sur notre site web.</p>
+
+                </div>
+                <div class="row">
+                    <div class="col-sm-2 col-md-2 music-gal item box container1">
+                        <img height="170" width="130" src="Image\110953.jpg" class="image">
+                        &emsp;&ensp;<p  class="text-center img-thumbnail2"><b>Taxi chaos</b></p>
+                        <button type="button" class="btn btn-primary-light btn-sm ma">JE PRÉCOMMANDE<i
+                            class="fa fa-angle-double-right" style="font-size:16px;color:red"></i> </button>
+                        <div class="middle">
+                            <div class="text">300 DH</div>
+                        </div>
+                    </div>
+                    <div class="col-sm-2 col-md-2 music-gal item box container1">
+                        <img height="170" width="130" src="Image\111343.jpg" class="image">
+                        &emsp;&ensp;<p class="img-thumbnail1"><b>Rust day one edition</b></p>
+                            <button type="button" class="btn btn-primary-light btn-sm ma">JE PRÉCOMMANDE<i
+                                class="fa fa-angle-double-right" style="font-size:16px;color:red"></i> </button>
+                        
+                        <div class="middle">
+                            <div class="text">700 DH</div>
+                        </div>
+                    </div>
+                    <div class="col-sm-2 col-md-2 music-gal item box container1">
+                        <img height="170" width="130" src="Image\109624.jpg" class="image">
+                        &emsp;&ensp;<p class="img-thumbnail2"><b>Mass effect</b></p>
+                        <button type="button" class="btn btn-primary-light btn-sm ma">JE PRÉCOMMANDE<i
+                            class="fa fa-angle-double-right" style="font-size:16px;color:red"></i> </button>
+                        <div class="middle">
+                            <div class="text">500 DH</div>
+                        </div>
+                    </div>
+                    <div class="col-sm-2 col-md-2 music-gal item box container1">
+                        <img height="170" width="130" src="Image\111274.jpg" class="image">
+                        &emsp;&ensp;<p class="img-thumbnail1"><b>The king of fighters xiv </b></p>
+                        <button type="button" class="btn btn-primary-light btn-sm ma">JE PRÉCOMMANDE<i
+                            class="fa fa-angle-double-right" style="font-size:16px;color:red"></i> </button>
+                        <div class="middle">
+                            <div class="text">600 DH</div>
+                        </div>
+                    </div>
+                    <div class="col-sm-2 col-md-2 music-gal item box container1">
+                        <img height="170" width="130" src="Image\107708.jpg" class="image">
+                        &emsp;&ensp;<p class="img-thumbnail1"><b>Chivalry 2 day one edition </b></p>
+                        <button type="button" class="btn btn-primary-light btn-sm ma">JE PRÉCOMMANDE<i
+                            class="fa fa-angle-double-right" style="font-size:16px;color:red"></i> </button>
+                        <div class="middle">
+                            <div class="text">400 DH</div>
+                        </div>
+                    </div>
+                    <div class="col-sm-2 col-md-2 music-gal item box container1">
+                        <img height="170" width="130" src="Image\111634.jpg" class="image">
+                        
+                        &emsp;&ensp;<p class="img-thumbnail2"><b>F1 2021</b></p>
+                        <button type="button" class="btn btn-primary-light btn-sm ma">JE PRÉCOMMANDE<i
+                        class="fa fa-angle-double-right" style="font-size:16px;color:red"></i> </button>
+                        <div class="middle">
+                            <div class="text">700 DH</div>
+                        </div>
+                    </div>
+
+            </div>
+        </div><br>
+
+
+
+        <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+        <script language="javascript">
+            $(document).ready(function () {
+                $('#p3,#p4').hide();
+                $("#btndisplay1").on("click", function () {
+                    $("#p3,#p4").toggle("slow");
+                    if ($(this).val() == "Afficher moins")
+                        $(this).val("Afficher plus");
+                    else
+                        $(this).val("Afficher moins");
+                });
+            });
+        </script>
+
+        </script>
+        <div id="p3" class="row">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+            <div class="col-sm-2 col-md-2 music-gal item box container1">
+                <img height="170" width="130" src="Image/109680.jpg" class="image">
+                &emsp;&ensp;<p class="img-thumbnail2"><b>Back 4 blood</b></p>
+                <button id="p3" type="button" class="btn btn-primary-light btn-sm ma">JE PRÉCOMMANDE<i
+                    class="fa fa-angle-double-right" style="font-size:16px;color:red"></i> </button>
+                <div class="middle">
+                    <div class="text">700 DH</div>
+                </div>
+            </div>
+            <div class="col-sm-2 col-md-2 music-gal item box container1">
+                <img height="170" width="130" src="Image/107766.jpg" class="image">
+                &emsp;&ensp;<p class="img-thumbnail2"><b>Riders republic</b></p>
+                    <button id="p3" type="button" class="btn btn-primary-light btn-sm ma">JE PRÉCOMMANDE<i
+                        class="fa fa-angle-double-right" style="font-size:16px;color:red"></i> </button>
+                
+                <div class="middle">
+                    <div class="text">600 DH</div>
+                </div>
+            </div>
+            <div class="col-sm-2 col-md-2 music-gal item box container1">
+                <img height="170" width="130" src="Image/91154.jpg" class="image">
+                &emsp;&ensp;<p class="img-thumbnail1"><b>Insurgency sandstorm </b></p>
+                <button id="p3" type="button" class="btn btn-primary-light btn-sm ma">JE PRÉCOMMANDE<i
+                    class="fa fa-angle-double-right" style="font-size:16px;color:red"></i> </button>
+                <div class="middle">
+                    <div class="text">500 DH</div>
+                </div>
+            </div>
+            <div class="col-sm-2 col-md-2 music-gal item box container1">
+                <img height="170" width="130" src="Image/108092.jpg" class="image">
+                &emsp;&ensp;<p class="img-thumbnail2"><b>Dying light 2</b></p>
+                <button id="p3" type="button" class="btn btn-primary-light btn-sm ma">JE PRÉCOMMANDE<i
+                    class="fa fa-angle-double-right" style="font-size:16px;color:red"></i> </button>
+                <div class="middle">
+                    <div class="text">450 DH</div>
+                </div>
+            </div>
+            <div class="col-sm-2 col-md-2 music-gal item box container1">
+                <img height="170" width="130" src="Image/111763.jpg" class="image">
+                &emsp;&ensp;<p class="img-thumbnail2"><b>Tales of arise </b></p>
+                <button id="p3" type="button" class="btn btn-primary-light btn-sm ma">JE PRÉCOMMANDE<i
+                    class="fa fa-angle-double-right" style="font-size:16px;color:red"></i> </button>
+                <div class="middle">
+                    <div class="text">700 DH</div>
+                </div>
+            </div>
+
+        </div>
+
+        </div>
+
+
+        </div>
+        </div>
+        </script>
+
+
+        <center><br><input type="button" value="Afficher plus" id="btndisplay1" class="btn btn-primary-light btn-sm">
+        </center>
+
+        </div>
+        </div>
+    </section>
+
+
+
+    <section class="testimonials text-center ">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 mx-auto wow fadeInUp">
+                    <h3 class="text-center font-weight-bold">Qui <span class="bg-main">sommes</span>-nous ?</h3>
+                    <!-- <p class=" text-center">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p> -->
+                </div>
+            </div>
+            <div id="about" class="row ">
+                <div class="col-sm-6 col-md-4 col-lg-6 mt-4 wow bounceInUp" data-wow-duration="1.4s">
+                    <div class="big-img-3">
+                        <img src="/Image/AdobeStock_180451967-960x640.jpeg" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-6 mt-4">
+                    <div class="my-right-text wow fadeInUp">
+
+                        <p class="text-justify font-italic">Le but de notre site c’est de vous proposer les jeux et
+                            consoles les plus récents et le les plus convoités du marché a des prix réalistes qui répond
+                            a vos attentes, nous sommes fiers de vous comptez parmi nos clients.
+
+                            <br>Nous a-do-rons nos clients et nous sommes toujours très intéressés par leur feedback et
+                            leurs suggestions. N’hésitez pas à utiliser la page Contactez-nous pour nous dire ce que
+                            vous appréciez et ce que nous pouvons améliorer.
+                        </p>
+
+                        <a href="#" class="link-color">Debbagh & Zair</a>
+                        <p class="text-muted">Créer En 2018</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="footer-07">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-12 text-center">
+                    <h2 class="footer-heading"><a  class="logo">STAY IN TOUCH</a></h2>
+                    <p class="menu">
+                        <a href="#">Home</a>
+                        <a href="#">Agent</a>
+                        <a href="#about">About</a>
+                        <a href="#">Listing</a>
+                        <a href="#">Blog</a>
+                        <a href="#">Contact</a>
+                    </p>
+                    <ul class="ftco-footer-social p-0">
+          <li class="ftco-animate"><a href="#" data-toggle="tooltip" data-placement="top" title="Twitter"><span><i class="fab fa-twitter"></i></span></a></li>
+          <li class="ftco-animate"><a href="#" data-toggle="tooltip" data-placement="top" title="Facebook"><span><i class="fab fa-facebook"></i></span></a></li>
+          <li class="ftco-animate"><a href="#" data-toggle="tooltip" data-placement="top" title="Instagram"><span><i class="fab fa-instagram"></i></span></a></li>
+        </ul>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-md-12 text-center">
+                    <p class="copyright"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="ion-ios-heart" aria-hidden="true"></i> by <a href="" target="_blank">DBG & ZR.com</a>
+                  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+    <script>
+        $(window).scroll(function () {
+
+
+            var topWindow = $(window).scrollTop();
+            var topWindow = topWindow * 1.5;
+            var windowHeight = $(window).height();
+            var position = topWindow / windowHeight;
+            position = 1 - position;
+
+            $('#bottom').css('opacity', position);
+
+        });
+
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+            document.getElementById("main").style.display = "0";
+            document.body.style.backgroundColor = "white";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.getElementById("main").style.marginRight = "0";
+            document.body.style.backgroundColor = "white";
+        }
+
+
+        $(window).on("scroll", function () {
+            if ($(this).scrollTop() > 10) {
+                $("nav.navbar").addClass("mybg-dark");
+                $("nav.navbar").addClass("navbar-shrink");
+
+
+            } else {
+                $("nav.navbar").removeClass("mybg-dark");
+                $("nav.navbar").removeClass("navbar-shrink");
+
+            }
+
+
+
+        });
+
+        $(function () {
+            $('#bottom').click(function () {
+                if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+                    var target = $(this.hash);
+                    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                    if (target.length) {
+                        $('html,body').animate({
+                            scrollTop: target.offset().top
+                        }, 500);
+                        return false;
+                    }
+                }
+            });
+        });
+
+
+    </script>
+    <script>
+        $(document).ready(function () {
+            $(".fancybox").fancybox({
+                openEffect: "none",
+                closeEffect: "none"
+            });
+        });
+    </script>
+</body>
